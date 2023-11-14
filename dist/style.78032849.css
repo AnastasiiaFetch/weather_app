@@ -1,0 +1,260 @@
+:root {
+  --color-white: rgba(255, 255, 255, 0.842);
+  --color-gray: rgba(128, 128, 128, 0.534);
+  --color-black: rgba(10, 10, 10, 0.808);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+  color: var(--color-white);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--color-black);
+}
+
+main > section:first-of-type {
+  width: 100%;
+  height: 20vh;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+main > section:first-of-type > div {
+  font-size: 1.2rem;
+  align-self: center;
+  cursor: pointer;
+}
+
+main > section:last-child {
+  display: none;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+}
+
+form {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form > input {
+  width: 60%;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: none;
+  text-align: center;
+}
+
+form > input:focus{
+  outline: none;
+}
+
+form > button {
+  width: 20%;
+  padding: 0.6rem;
+  margin-left: 1rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: var(--color-gray);
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+form > button:hover {
+  box-shadow: 5px 3px 10px 3px rgba(0, 0, 0, 0.5);
+}
+
+.main_page_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main_page_wrapper > div:last-child {
+  align-self: center;
+  font-size: 2rem;
+}
+
+.outputForecast {
+  width: 50%;
+}
+
+.outputInfo {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+
+.main_info_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.location_info_wrapper {
+  font-size: 1.2rem;
+  align-self: center;
+}
+
+span {
+  font-weight: 700;
+}
+
+.condition_desc {
+  font-size: 1.2rem;
+}
+
+.condition_info_wrapper {
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.detailed_info_wrapper {
+  border-top: 1px solid var(--color-gray);
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.forecast_card {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+.forecast_card:nth-child(2n) {
+  background-color: var(--color-gray);
+}
+
+.forecast_card:nth-child(2n + 1) {
+  border: 1px solid var(--color-gray);
+}
+
+.forecast_card > div {
+  width: 20%;
+  text-align: center;
+}
+
+.forecast_section_header {
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--color-gray);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.forecast_section_cards {
+  width: 100%;
+}
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-gray);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-black);
+}
+
+@media (max-width: 768px) {
+
+  html {
+    font-size: 10px;
+  }
+
+  main{
+    justify-content: normal;
+  }
+
+  main > section:first-of-type {
+    flex-direction: column;
+    height: fit-content;
+    justify-content: space-around;
+  }
+
+  main > section:first-of-type > div {
+    margin-bottom: 1rem;
+  }
+
+  main > section:last-child {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .main_page_wrapper > div:last-child {
+    align-self: center;
+    font-size: 1rem;
+  }
+
+  .outputForecast {
+    width: 100%;
+  }
+
+  .outputInfo {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 1rem 0;
+    border-top: 1px solid var(--color-gray);
+    border-bottom: 1px solid var(--color-gray);
+  }
+
+  .main_info_wrapper{
+    width: 60%;
+  }
+
+  .location_info_wrapper {
+    font-size: 1rem;
+  }
+
+  .condition_desc {
+    font-size: 1rem;
+  }
+
+  .detailed_info_wrapper {
+    border-top: none;
+    font-size: 1rem;
+  }
+
+}
+
+
+/*# sourceMappingURL=/style.78032849.css.map */
